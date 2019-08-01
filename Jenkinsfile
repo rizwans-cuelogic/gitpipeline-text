@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('integration'){
             steps{
-                sh '''#!/bin/bash
+                sh '''#!/bin/bash -xe
                     sudo cp . ${env.DEPLOYMENT_LOCATION}
                     virtualenv -p python3 myenv
                     source test/bin/activate
