@@ -2,32 +2,20 @@ pipeline{
 
     agent any 
     stages{
-
-        stage('One'){
+    if(env.BRANCH_NAME=='development'){
+        stage('integration'){
             steps{
                 sh "ls "
             }
         }
-        stage('Two'){
+        stage('deployment'){
             steps{
                 input("Do you want to proceed?")
             }
 
         }
-        stage('Three'){
-
-                when{
-                    not{
-                        branch "development"
-                    }
-
-                }
-                steps{
-                    echo "hello"
-                }
-
-        }
-
+    }
+    
     }
 
 }
