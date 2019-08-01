@@ -5,7 +5,7 @@ pipeline{
 
         stage('One'){
             steps{
-                echo 'Hi, this is rizwan'
+                ls
             }
         }
         stage('Two'){
