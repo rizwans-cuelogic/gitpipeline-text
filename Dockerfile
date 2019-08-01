@@ -12,6 +12,5 @@ EXPOSE 8000
 
 RUN pip install -r requirements.txt
 
-# CMD ["./app_run.sh"]
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8001"]
+CMD ["./docker-entrypoint.sh"]

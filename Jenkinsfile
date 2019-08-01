@@ -6,21 +6,18 @@ pipeline{
     stages{
         stage('integration'){
             steps{
-                sh '''#!/bin/bash -xe
-                    sudo chmod 777 /home/rushikesh/janzati/CICD/ 
-                    sudo cp -r . /home/rushikesh/janzati/CICD/
-                    cd /home/rushikesh/janzati/CICD/
-                    sudo virtualenv -p python3 myenv
+                sh '''#!/bin/bash
+                    virtualenv -p python3 myenv
                     source test/bin/activate
-                    pip3 install -r requirements.txt
-                    python3 manage.py migrate
+                    pip install -r requirements.txt
                 '''
                 
             }
         }
         stage('deployment'){
             steps{
-                sh "./app_run.sh"
+                sh "docker build -t images/injazati_rest_file ."
+                sh "docker run -it -e 8000:8000 --network='host' images/injazati_rest_file"
             }
 
         }

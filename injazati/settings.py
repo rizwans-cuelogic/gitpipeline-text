@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'injazati.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'injazati_ex',
-        'USER': 'root',
-        'PASSWORD': 'root123',
-        'HOST':'0.0.0.0',
-        'PORT':'3306'
+        'NAME': 'injazati',   #os.environ['DATABASE_NAME'],
+        'USER': 'root',      #os.environ['DATABASE_USER'],
+        'PASSWORD': 'root123', #os.environ['DATABASE_PASS'],
+        'HOST': '127.0.0.1',  #os.environ['DATABASE_HOST'],
+        'PORT': '3306',       #s.environ['DATABASE_PORT']
     }
 }
 
