@@ -1,10 +1,13 @@
+def getGitBranchName() {
+    return scm.branches[0].name
+}
 pipeline{
 
     agent any 
     stages{
         stage('integration'){
             steps{
-                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL} on ${BRANCH_NAME}"
+                 echo "THis is git branch ${getGitBranchName()}"
             }
         }
         stage('deployment'){
