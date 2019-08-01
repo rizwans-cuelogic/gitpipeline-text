@@ -7,7 +7,8 @@ pipeline{
         stage('integration'){
             steps{
                 sh '''#!/bin/bash -xe
-                    sudo cp . ${env.DEPLOYMENT_LOCATION}
+                    sudo cp . /home/rushikesh/janzati/CICD/
+                    cd /home/rushikesh/janzati/CICD/
                     virtualenv -p python3 myenv
                     source test/bin/activate
                     pip install -r requirements.txt
