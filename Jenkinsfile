@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('integration'){
             steps{
-                bash '''#!/bin/bash
+                sh '''#!/bin/bash
                     virtualenv -p python3 myenv
                     source test/bin/activate
                     pip install -r requirements.txt
