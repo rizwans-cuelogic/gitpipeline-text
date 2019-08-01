@@ -7,6 +7,7 @@ pipeline{
         stage('integration'){
             steps{
                 sh '''#!/bin/bash
+                    sudo cp . ${env.DEPLOYMENT_LOCATION}
                     virtualenv -p python3 myenv
                     source test/bin/activate
                     pip install -r requirements.txt
