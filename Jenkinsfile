@@ -16,8 +16,8 @@ pipeline{
         }
         stage('deployment'){
             steps{
-                sh "docker build -t images/injazati_rest_file ."
-                sh "docker run -it -e 8000:8000 --network='host' images/injazati_rest_file"
+                sh "sudo docker build -t images/injazati_rest_file ."
+                sh "sudo docker run -it -e 8000:8000 --network='host' images/injazati_rest_file"
             }
 
         }
