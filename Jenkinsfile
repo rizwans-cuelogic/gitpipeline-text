@@ -5,7 +5,7 @@ pipeline{
 
         stage('One'){
             steps{
-                ls
+                sh "ls "
             }
         }
         stage('Two'){
