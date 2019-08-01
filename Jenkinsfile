@@ -2,10 +2,9 @@ pipeline{
 
     agent any 
     stages{
-    if(env.BRANCH_NAME=='development'){
         stage('integration'){
             steps{
-                sh "ls "
+                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL} on ${env.BRANCH_NAME}"
             }
         }
         stage('deployment'){
@@ -14,7 +13,6 @@ pipeline{
             }
 
         }
-    }
     
     }
 
