@@ -1,0 +1,8 @@
+Django==2.2.3
+djangorestframework==3.10.1
+gunicorn==19.9.0
+mysqlclient==1.4.2.post1
+pycrypto==2.6.1
+pytz==2019.1
+simple-crypt==4.1.7
+sqlparse==0.3.0
