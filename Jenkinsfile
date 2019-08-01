@@ -1,3 +1,5 @@
+env.DEPLOYMENT_LOCATION= "/home/rushikesh/janzati/CICD/"
+
 pipeline{
 
     agent any 
@@ -5,6 +7,7 @@ pipeline{
         stage('integration'){
             steps{
                 sh "ls"
+                sh "cp -r . ${env.DEPLOYMENT_LOCATION}"
                 sh "virtualenv test"
                 sh "source test/bin/activate"
                 sh "pip install -r requirements.txt"
