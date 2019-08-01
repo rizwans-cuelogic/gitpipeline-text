@@ -7,7 +7,7 @@ pipeline{
         stage('integration'){
             steps{
                 sh '''#!/bin/bash -xe
-                    sudo cp . /home/rushikesh/janzati/CICD/
+                    sudo cp -r . /home/rushikesh/janzati/CICD/
                     cd /home/rushikesh/janzati/CICD/
                     virtualenv -p python3 myenv
                     source test/bin/activate
