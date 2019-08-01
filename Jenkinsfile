@@ -17,7 +17,7 @@ pipeline{
         }
         stage('deployment'){
             steps{
-                sh "python3 manage.py runserver 0.0.0.0:8000"
+                sh "./app_run.sh"
             }
 
         }
