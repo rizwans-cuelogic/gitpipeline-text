@@ -10,14 +10,14 @@ pipeline{
                     virtualenv -p python3 myenv
                     source test/bin/activate
                     pip install -r requirements.txt
-                    python manage.py migrate
+                    python3 manage.py migrate
                 '''
                 
             }
         }
         stage('deployment'){
             steps{
-                sh "python manage.py runserver 0.0.0.0:8000"
+                sh "python3 manage.py runserver 0.0.0.0:8000"
             }
 
         }
