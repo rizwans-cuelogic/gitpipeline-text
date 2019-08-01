@@ -10,9 +10,9 @@ pipeline{
                     sudo chmod 777 /home/rushikesh/janzati/CICD/ 
                     sudo cp -r . /home/rushikesh/janzati/CICD/
                     cd /home/rushikesh/janzati/CICD/
-                    virtualenv -p python3 myenv
+                    sudo virtualenv -p python3 myenv
                     source test/bin/activate
-                    pip install -r requirements.txt
+                    pip3 install -r requirements.txt
                     python3 manage.py migrate
                 '''
                 
