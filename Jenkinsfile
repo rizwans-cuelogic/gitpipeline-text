@@ -1,7 +1,4 @@
-env.DEPLOYMENT_LOCATION= "/home/rushikesh/janzati/CICD/"
-
 pipeline{
-
     agent any 
     stages{
         stage('integration'){
