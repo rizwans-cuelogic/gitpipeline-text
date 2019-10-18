@@ -74,4 +74,6 @@ class UserDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset= User.objects.all()
     serializer_class = UserSerializer
     authentication_classes = [MyCustomAuthentication]
+
+    
     # permission_classes = [MyCustomAuthentication]
