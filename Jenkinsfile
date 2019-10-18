@@ -17,7 +17,6 @@ pipeline{
 
                         pip install pylint
                         ls .
-                        cd repo
                         ### Need this because some strange control sequences when using default TERM=xterm
                         export TERM="linux"
 
