@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage('integration'){
             steps{
-                bash '''#!/bin/bash
+                sh '''#!/bin/bash
                     if [ ! -d venv ] ; then
 
                         virtualenv --python=python3 venv
